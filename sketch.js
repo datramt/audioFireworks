@@ -89,3 +89,9 @@ function mousePressed() {
   envelope.play(noiz, 0, 0.1);
   innerR = 0;
 }
+
+function touchStarted() {
+  if (getAudioContext().state !== 'running') {
+    getAudioContext().resume();
+  }
+}
